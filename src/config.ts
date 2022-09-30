@@ -3,3 +3,4 @@
 
 export const SITE_TITLE = "Happy Animals Club";
 export const SITE_DESCRIPTION = "No-kill animal shelter. Established in 2014.";
+export const NAVBAR_HEIGHT = 64;

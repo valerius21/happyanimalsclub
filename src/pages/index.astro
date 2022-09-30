@@ -1,26 +1,10 @@
 ---
-import BaseHead from "../components/BaseHead.astro";
-import Footer from "../components/Footer.astro";
-import Header from "../components/Header.astro";
 import Hero from "../components/Hero.astro";
-import { SITE_DESCRIPTION, SITE_TITLE } from "../config";
+import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
-<!DOCTYPE html>
-<html lang="en" data-theme="lofi">
-  <head>
-    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-  </head>
-  <body>
-    <Header title={SITE_TITLE} />
-    <main>
-      <Hero />
-    </main>
-    <Footer />
-    <style>
-      main {
-        @apply py-8 bg-orange-1;
-      }
-    </style>
-  </body>
-</html>
+<BaseLayout>
+  <div class="py-8">
+    <Hero />
+  </div>
+</BaseLayout>

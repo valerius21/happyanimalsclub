@@ -4,16 +4,38 @@ import HeaderLink from "./HeaderLink.astro";
 ---
 
 <header
-  class="h-16 flex flex-row justify-between items-center px-5 sticky top-0 z-10 bg-orange-1"
+  class={`h-16 flex flex-row justify-between items-center px-5 sticky top-0 z-10 bg-orange-1`}
 >
-  <img alt={SITE_TITLE} src="/hac_logo.png" class="w-3/12" />
+  <a href="/" class="w-3/12">
+    <img alt={SITE_TITLE} src="/hac_logo.png" />
+  </a>
   <nav class="flex flex-row">
     <HeaderLink href="/">Home</HeaderLink>
-    <HeaderLink href="/contact">Contact</HeaderLink>
+    <HeaderLink
+      href="/donate"
+      class="text-sand-1 bg-orange-9 rounded-md font-bold hover:bg-orange-10"
+      >Donate</HeaderLink
+    >
     <HeaderLink href="/about">About</HeaderLink>
-    <!-- TODO: fix links -->
-    <HeaderLink href="#" target="_blank" icon="instagram" />
-    <HeaderLink href="#" target="_blank" icon="facebook" />
-    <HeaderLink href="#" target="_blank" icon="twitter" />
+    <HeaderLink href="/faq">F.A.Q.</HeaderLink>
+    <HeaderLink href="/contact">Contact</HeaderLink>
+    <HeaderLink href="https://www.patreon.com/happyanimalsclub" target="_blank"
+      >Patreon</HeaderLink
+    >
+    <HeaderLink
+      href="https://www.instagram.com/happyanimalsclub/"
+      target="_blank"
+      icon="instagram"
+    />
+    <HeaderLink
+      href="https://www.facebook.com/happy.animals.club.animal.shelter/"
+      target="_blank"
+      icon="facebook"
+    />
+    <HeaderLink
+      href="https://twitter.com/plentyofpets"
+      target="_blank"
+      icon="twitter"
+    />
   </nav>
 </header>

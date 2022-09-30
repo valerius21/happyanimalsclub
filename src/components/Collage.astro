@@ -21,7 +21,8 @@
     margin-top: 8px;
     vertical-align: middle;
     width: 100%;
-    @apply rounded-md;
+    @apply rounded-md shadow-xl cursor-pointer;
+    @apply transition duration-200 ease-in-out transform hover:-translate-y-1 hover:scale-110;
   }
 
   /* Responsive layout - makes a two column-layout instead of four columns */
@@ -54,7 +55,7 @@
         <img src="pets/dog_3.jpg" alt="A dog sleeping" />
       </div>
     </div>
-    <div class="column">
+    <div class="column mt-5">
       <div id="item-3">
         <img src="pets/dog_4.jpg" alt="A dog chilling" />
       </div>
@@ -77,7 +78,7 @@
       </div>
       <div>
         <!-- TODO: add another picture -->
-        <img src="pets/dog_5.jpg" alt="A puppy" />
+        <img src="pets/dog_6.jpg" alt="A puppy" />
       </div>
     </div>
   </div>
