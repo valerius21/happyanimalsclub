@@ -1,18 +1,23 @@
 ---
-export interface Props extends astroHTML.JSX.AnchorHTMLAttributes {}
+export interface Props extends astroHTML.JSX.AnchorHTMLAttributes {
+  icon?: "facebook" | "twitter" | "instagram";
+}
 
-const { href, class: className, ...props } = Astro.props;
+const { href, class: className, icon, ...props } = Astro.props;
 const isActive = href === Astro.url.pathname.replace(/\/$/, "");
 ---
 
 <a href={href} class:list={[className, { active: isActive }]} {...props}>
+  <!-- <i icon-name={icon}></i> -->
+  {icon && <i icon-name={icon} class="h-4" />}
   <slot />
 </a>
 <style>
   a {
-    /* display: inline-block; */
+    display: flex;
+    align-items: center;
     /* text-decoration: none; */
-    @apply text-sand-12 px-4 py-2 text-center hover:bg-orange-4 hover:text-orange-12 font-semibold rounded;
+    @apply text-sand-12 mx-2 px-4 py-2 text-center hover:bg-orange-4 hover:text-orange-12 font-semibold rounded;
   }
   a.active {
     /* font-weight: bolder; */
@@ -20,3 +25,14 @@ const isActive = href === Astro.url.pathname.replace(/\/$/, "");
     @apply underline font-bold;
   }
 </style>
+
+<script>
+  import { createIcons, Facebook, Instagram, Twitter } from "lucide";
+  createIcons({
+    icons: {
+      Facebook,
+      Instagram,
+      Twitter,
+    },
+  });
+</script>

@@ -7,13 +7,13 @@ import HeaderLink from "./HeaderLink.astro";
   class="h-16 flex flex-row justify-between items-center px-5 sticky top-0 z-10 bg-orange-1"
 >
   <img alt={SITE_TITLE} src="/hac_logo.png" class="w-3/12" />
-  <nav>
+  <nav class="flex flex-row">
     <HeaderLink href="/">Home</HeaderLink>
     <HeaderLink href="/contact">Contact</HeaderLink>
     <HeaderLink href="/about">About</HeaderLink>
     <!-- TODO: fix links -->
-    <HeaderLink href="#" target="_blank">Instagram</HeaderLink>
-    <HeaderLink href="#" target="_blank">Facebook</HeaderLink>
-    <HeaderLink href="#" target="_blank">Twitter</HeaderLink>
+    <HeaderLink href="#" target="_blank" icon="instagram" />
+    <HeaderLink href="#" target="_blank" icon="facebook" />
+    <HeaderLink href="#" target="_blank" icon="twitter" />
   </nav>
 </header>
