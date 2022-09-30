@@ -3,14 +3,32 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
 <BaseLayout>
-  <div id="donate"></div>
+  <div
+    id="donate"
+    class="flex flex-row mx-auto items-center justify-center pt-16"
+  >
+    <div class="prose prose-xl">
+      <h1>Donate</h1>
+      <p>
+        If you like this project, please consider donating to help support it.
+      </p>
+      <img src="/donate.png" alt="Donation Button" />
+    </div>
+    <div>
+      <img
+        src="/appeal_1200.jpg"
+        alt="Please support the shelter. :)"
+        class="max-w-md rounded-md shadow-xl ml-5"
+      />
+    </div>
+  </div>
 </BaseLayout>
 
 <style>
-  #donate {
+  /* #donate {
     background-image: url("/appeal_1200.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
-  }
+  } */
 </style>
