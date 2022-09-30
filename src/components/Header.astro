@@ -1,6 +1,7 @@
 ---
 import { SITE_TITLE } from "../config";
 import HeaderLink from "./HeaderLink.astro";
+import Menu from "./Menu.astro";
 ---
 
 <header
@@ -9,7 +10,10 @@ import HeaderLink from "./HeaderLink.astro";
   <a href="/" class="w-3/12">
     <img alt={SITE_TITLE} src="/hac_logo.png" />
   </a>
-  <nav class="flex flex-row">
+  <nav class="block lg:hidden">
+    <Menu />
+  </nav>
+  <nav class="lg:flex lg:flex-row hidden">
     <HeaderLink href="/">Home</HeaderLink>
     <HeaderLink
       href="/donate"
