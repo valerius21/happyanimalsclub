@@ -7,7 +7,12 @@ const { href, class: className, icon, ...props } = Astro.props;
 const isActive = href === Astro.url.pathname.replace(/\/$/, "");
 ---
 
-<a href={href} class:list={[className, { active: isActive }]} {...props}>
+<a
+  rel={`${!icon && "prefetch"}`}
+  href={href}
+  class:list={[className, { active: isActive }]}
+  {...props}
+>
   {icon && <i icon-name={icon} class="h-4" />}
   <slot />
 </a>

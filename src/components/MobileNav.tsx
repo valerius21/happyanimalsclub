@@ -27,7 +27,12 @@ const SocialLink: FunctionComponent<{
   href: string;
   name: "instagram" | "facebook" | "patreon";
 }> = ({ href, name }) => (
-  <a href={href} class="bg-orange-4 p-6 rounded-xl" target="_blank">
+  <a
+    rel="prefetch"
+    href={href}
+    class="bg-orange-4 p-6 rounded-xl"
+    target="_blank"
+  >
     {name == "instagram" ? (
       <Instagram class="h-5" />
     ) : name == "facebook" ? (
