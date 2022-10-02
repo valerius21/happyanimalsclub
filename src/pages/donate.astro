@@ -1,34 +1,78 @@
 ---
+import DonationCard from "../components/DonationCard.astro";
+import HeaderLink from "../components/HeaderLink.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
 <BaseLayout>
   <div
     id="donate"
-    class="flex flex-row mx-auto items-center justify-center pt-16"
+    class="flex flex-col lg:flex-row-reverse mx-auto p-8 mb-8 justify-around items-start sticky top-0"
   >
-    <div class="prose prose-xl">
-      <h1>Donate</h1>
-      <p>
-        If you like this project, please consider donating to help support it.
-      </p>
-      <img src="/donate.png" alt="Donation Button" />
-    </div>
-    <div>
+    <div class="grid gap-6">
       <img
         src="/appeal_1200.jpg"
         alt="Please support the shelter. :)"
-        class="max-w-md rounded-md shadow-xl ml-5"
+        class="hidden sm:block max-w-lg rounded-md shadow-xl lg:ml-5"
       />
+      <img
+        src="/pets/dog_2.jpg"
+        alt="Please support the shelter. :)"
+        class="hidden sm:block max-w-lg rounded-md shadow-xl lg:ml-5"
+      />
+      <img
+        src="/pets/cat_1.jpg"
+        alt="Please support the shelter. :)"
+        class="hidden sm:block max-w-lg rounded-md shadow-xl lg:ml-5"
+      />
+    </div>
+    <div class="prose prose-xl">
+      <h1 class="mt-8 lg:mt-0">Donate</h1>
+      <p>
+        Donations pay for dog food, cat food, veterinary care and all the
+        expenses involved in running a no-kill animal shelter. Happy Animals
+        Club has no source of funding other than donations received via this
+        website. Donations are used for day-to-day operations, as well as the
+        upkeep and improvement of the shelter's facilities.
+      </p>
+      <div class="flex flex-col items-center sm:flex-row justify-around">
+        <DonationCard
+          title="Donate via PayPal"
+          subtitle="(One-time)"
+          imageAlt="PayPal"
+          imageURL="https://www.paypalobjects.com/webstatic/mktg/Logo/pp-logo-200px.png"
+        />
+        <div class="mt-6 sm:mt-0">
+          <DonationCard
+            title="Donate via Patreon"
+            subtitle="(Monthly)"
+            imageAlt="Patreon"
+            imageURL="/patreon.png"
+          />
+        </div>
+      </div>
+      <p>
+        If you prefer you can deposit or wire a donation to the Happy Animals
+        Club bank account. if you use this method please drop us a line
+        afterwards, because the donor's name does not show on our bank statement
+        and we won't know whom it's from!
+      </p>
+      <pre>BANK NAME: UNIONBANK
+BANK ACCOUNT NAME: HAPPYANIMALSCLUB INC. (no spaces in "HAPPYANIMALSCLUB")
+BANK ACCOUNT NUMBER: 102840013537
+UNIONBANK SWIFT CODE: UBPHPHMM</pre>
+      <h2>More about the shelter</h2>
+      <div class="flex flex-row">
+        <HeaderLink href="/about">About</HeaderLink>
+        <HeaderLink
+          href="https://www.instagram.com/happyanimalsclub/"
+          icon="instagram">Instagram</HeaderLink
+        >
+        <HeaderLink
+          href="https://www.facebook.com/happy.animals.club.animal.shelter/"
+          icon="facebook">Facebook</HeaderLink
+        >
+      </div>
     </div>
   </div>
 </BaseLayout>
-
-<style>
-  /* #donate {
-    background-image: url("/appeal_1200.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100vh;
-  } */
-</style>

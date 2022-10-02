@@ -1,0 +1,40 @@
+---
+export interface Props extends astroHTML.JSX.AnchorHTMLAttributes {
+  imageURL: string;
+  imageAlt: string;
+  title: string;
+  subtitle: string;
+}
+
+const { imageURL, imageAlt, title, subtitle, href } = Astro.props;
+---
+
+<a href={href}>
+  <img src={imageURL} alt={imageAlt} class="max-h-[50px] w-auto" />
+  <p class="donation-title">{title}</p>
+  <p class="donation-subtitle">
+    {subtitle}
+  </p>
+</a>
+
+<style>
+  a {
+    text-decoration: none !important;
+    /* Layout */
+    @apply flex flex-col justify-center items-center border-2;
+    /* Form */
+    @apply rounded-lg p-4 w-64 h-72 cursor-pointer;
+    /* Color */
+    @apply bg-orange-3 border-orange-6;
+    /* Hover */
+    @apply hover:bg-orange-4 hover:border-orange-8 transition-all duration-200 ease-in-out transform hover:scale-110 hover:shadow-lg;
+  }
+  .donation-title {
+    /* Text */
+    @apply text-center text-2xl font-bold text-orange-9 hover:text-orange-10 !important;
+  }
+  .donation-subtitle {
+    @apply m-0 !important;
+    @apply text-center text-base font-normal;
+  }
+</style>

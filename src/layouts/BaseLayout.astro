@@ -10,7 +10,7 @@ import { SITE_DESCRIPTION, SITE_TITLE } from "../config";
   <head>
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
   </head>
-  <body>
+  <body class="bg-orange-2">
     <Header title={SITE_TITLE} />
     <main>
       <slot />
@@ -18,7 +18,7 @@ import { SITE_DESCRIPTION, SITE_TITLE } from "../config";
     <Footer />
     <style>
       main {
-        @apply bg-orange-2 h-[calc(100vh_-_64px)];
+        @apply min-h-[calc(100vh_-_64px)];
       }
     </style>
   </body>

@@ -4,8 +4,9 @@ import Collage from "./Collage.astro";
 
 <div
   id="hero"
-  class="flex flex-row items-center justify-around px-10 bg-orange-2"
+  class="flex lg:flex-row-reverse items-center justify-around px-10 bg-orange-2"
 >
+  <Collage />
   <div class="grid gap-6 ml-8">
     <div class="prose">
       <h3 class="text-sand-9">Happy Animals Club, est. 2014</h3>
@@ -15,18 +16,17 @@ import Collage from "./Collage.astro";
     </div>
     <div class="flex flex-row">
       <a
-        class="text-xl text-sand-1 bg-orange-9 flex justify-center items-center p-3 rounded-md font-bold max-w-[50%] uppercase hover:bg-orange-10 cursor-pointer"
+        class="text-xl text-sand-1 bg-orange-9 flex justify-center items-center p-3 rounded-md font-bold max-w-[50%] uppercase hover:bg-orange-10 cursor-pointer transition-colors duration-200 ease-in-out"
         href="/donate"
       >
         Become a lifesaver
       </a>
       <a
-        class="text-xl text-orange-9 flex justify-center items-center p-3 rounded-md font-bold max-w-[50%] ml-4 border-2 border-orange-6 bg-orange-3 hover:border-orange-8 hover:bg-orange-4 cursor-pointer"
+        class="text-xl text-orange-9 flex justify-center items-center p-3 rounded-md font-bold max-w-[50%] ml-4 border-2 border-orange-6 bg-orange-3 hover:border-orange-8 hover:bg-orange-4 cursor-pointer transition-colors duration-200 ease-in-out"
         href="/about"
       >
         Learn more
       </a>
     </div>
   </div>
-  <Collage />
 </div>
