@@ -4,32 +4,35 @@
   }
 
   .row {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 0 4px;
-    justify-content: center;
+    @apply hidden md:flex;
+    @apply flex-wrap justify-center;
+    @apply px-1 py-0;
   }
 
   /* Create four equal columns that sits next to each other */
   .column {
     flex: 25%;
-    max-width: 25%;
-    padding: 0 4px;
+    @apply px-1 py-0;
+    @apply lg:max-w-[25%];
+    /* @apply ; */
   }
 
   .column img {
-    margin-top: 8px;
-    vertical-align: middle;
-    width: 100%;
+    @apply mt-2 w-full align-middle;
     @apply rounded-md shadow-xl cursor-pointer;
     @apply transition duration-200 ease-in-out transform hover:-translate-y-1 hover:scale-110;
+  }
+
+  .column div {
+    @apply mx-1;
   }
 
   /* Responsive layout - makes a two column-layout instead of four columns */
   @media screen and (max-width: 800px) {
     .column {
       flex: 50%;
-      max-width: 50%;
+      /* max-width: 50%; */
+      @apply lg:max-w-[50%];
     }
   }
 
@@ -37,14 +40,17 @@
   @media screen and (max-width: 600px) {
     .column {
       flex: 100%;
-      max-width: 100%;
+      @apply max-w-full;
     }
   }
 </style>
 
+<div class="block md:hidden w-screen max-h-[430px]">
+  <img src="/hero_crop.jpg" alt="Happy Animals Club" />
+</div>
 <div id="hero-collage">
   <div class="row">
-    <div class="column hidden lg:block">
+    <div class="column flex lg:block">
       <div id="item-0">
         <img src="pets/dog_1.jpg" alt="A dog in a wheelchair" />
       </div>
