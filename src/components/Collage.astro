@@ -1,3 +1,18 @@
+---
+import { Image } from "@astrojs/image/components";
+
+// import HeroCrop from '../assets/hero_crop.jpg';
+// import Dog1 from '../assets/dog_1.jpg';
+// import Dog2 from '../assets/dog_2.jpg';
+// import Dog3 from '../assets/dog_3.jpg';
+// import Dog4 from '../assets/dog_4.jpg';
+// import Dog5 from '../assets/dog_5.jpg';
+// import Dog6 from '../assets/dog_6.jpg';
+// import Cat1 from '../assets/cat_1.jpg';
+// import Cat2 from '../assets/cat_2.jpg';
+// import Cat3 from '../assets/cat_3.jpg';
+---
+
 <style>
   #hero-collage {
     max-width: 50%;
@@ -46,45 +61,89 @@
 </style>
 
 <div class="block md:hidden w-screen max-h-[430px]">
-  <img src="/hero_crop.jpg" alt="Happy Animals Club" />
+  <Image
+    src={import("../assets/hero_crop.jpg")}
+    alt="Happy Animals Club"
+    format={"webp"}
+  />
 </div>
 <div id="hero-collage">
   <div class="row">
     <div class="column hidden max-w-[200px] md:block">
       <div id="item-0">
-        <img src="pets/dog_1.jpg" alt="A dog in a wheelchair" />
+        <Image
+          src={import("../assets/pets/dog_1.jpg")}
+          format={"webp"}
+          alt="A dog in a wheelchair"
+        />
       </div>
       <div id="item-1">
-        <img src="pets/dog_2.jpg" alt="A dog in a wheelchair" />
+        <Image
+          src={import("../assets/pets/dog_2.jpg")}
+          format={"webp"}
+          alt="A dog in a wheelchair"
+        />
       </div>
       <div id="item-2">
-        <img src="pets/dog_3.jpg" alt="A dog sleeping" />
+        <Image
+          src={import("../assets/pets/dog_3.jpg")}
+          alt="A dog sleeping"
+          format={"webp"}
+        />
       </div>
     </div>
     <div class="column mt-5 hidden lg:block">
       <div id="item-3">
-        <img src="pets/dog_4.jpg" alt="A dog chilling" />
+        <Image
+          src={import("../assets/pets/dog_4.jpg")}
+          alt="A dog chilling"
+          format={"webp"}
+        />
       </div>
       <div id="item-4">
-        <img src="pets/dog_5.jpg" alt="A puppy" />
+        <Image
+          src={import("../assets/pets/dog_5.jpg")}
+          alt="A puppy"
+          format={"webp"}
+        />
       </div>
       <div id="item-5">
-        <img src="pets/cat_1.jpg" alt="A cat" />
+        <Image
+          src={import("../assets/pets/cat_1.jpg")}
+          alt="A cat"
+          format={"webp"}
+        />
       </div>
     </div>
     <div class="column hidden lg:block">
       <div id="item-6">
-        <img src="hero_crop.jpg" alt="Another dog" />
+        <Image
+          src={import("../assets/hero_crop.jpg")}
+          alt="Another dog"
+          format={"webp"}
+        />
       </div>
       <div id="item-7">
-        <img src="pets/cat_2.jpg" alt="Another cat" />
+        <Image
+          src={import("../assets/pets/cat_2.jpg")}
+          alt="Another cat"
+          format={"webp"}
+        />
       </div>
       <div id="item-8">
-        <img src="pets/cat_3.jpg" alt="Another cat" />
+        <Image
+          src={import("../assets/pets/cat_3.jpg")}
+          alt="Another cat"
+          format={"webp"}
+        />
       </div>
       <div>
         <!-- TODO: add another picture -->
-        <img src="pets/dog_6.jpg" alt="A puppy" />
+        <Image
+          src={import("../assets/pets/dog_6.jpg")}
+          alt="A puppy"
+          format={"webp"}
+        />
       </div>
     </div>
   </div>
