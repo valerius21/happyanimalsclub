@@ -4,17 +4,17 @@ import Collage from "./Collage.astro";
 
 <div
   id="hero"
-  class="flex flex-col lg:flex-row-reverse items-center justify-around px-10 bg-orange-2"
+  class="flex flex-col md:flex-row-reverse items-center justify-around px-10 bg-orange-2"
 >
   <Collage />
-  <div class="grid gap-6 ml-8 mt-8 lg:mt-0">
-    <div class="prose">
+  <div class="grid gap-6 lg:ml-8 mt-10 lg:mt-0">
+    <div class="prose prose-sm md:prose-base text-center lg:text-start">
       <h3 class="text-sand-9">Happy Animals Club, est. 2014</h3>
-      <h1 class="text-sand-12 my-6">
+      <h1 class="text-sand-12 my-6 text-center lg:text-start">
         No-Kill Animal Shelter and Sancturary in the Philippines
       </h1>
     </div>
-    <div class="flex flex-row">
+    <div class="flex flex-row mx-auto w-full justify-center lg:justify-start">
       <a
         class="text-xl text-sand-1 bg-orange-9 flex justify-center items-center p-3 rounded-md font-bold max-w-[50%] uppercase hover:bg-orange-10 cursor-pointer transition-colors duration-200 ease-in-out"
         href="/donate"
