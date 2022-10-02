@@ -2,7 +2,7 @@
 layout: "../layouts/BlogPost.astro"
 title: "Frequently Asked Questions"
 updatedDate: "September 30 2022"
-## description: "Lorem ipsum dolor sit amet"
+description: "Got questions? We've got answers."
 ## heroImage: "/appeal_1200.jpg"
 ---
 

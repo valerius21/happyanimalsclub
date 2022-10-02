@@ -1,7 +1,7 @@
 ---
 layout: "../layouts/BlogPost.astro"
 title: "About Us"
-description: "Lorem ipsum dolor sit amet"
+description: "Learn more about us."
 updatedDate: "September 30 2022"
 heroImage: "/hero_crop.jpg"
 ---
