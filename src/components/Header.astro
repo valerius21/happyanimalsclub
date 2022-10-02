@@ -1,7 +1,7 @@
 ---
 import { SITE_TITLE } from "../config";
 import HeaderLink from "./HeaderLink.astro";
-import Menu from "./Menu.astro";
+import MobileNav from "./MobileNav";
 ---
 
 <header
@@ -10,9 +10,9 @@ import Menu from "./Menu.astro";
   <a href="/" class="w-3/12">
     <img alt={SITE_TITLE} src="/hac_logo.png" />
   </a>
-  <nav class="block lg:hidden">
-    <Menu />
-  </nav>
+  <div class="block lg:hidden">
+    <MobileNav client:visible />
+  </div>
   <nav class="lg:flex lg:flex-row hidden">
     <HeaderLink href="/">Home</HeaderLink>
     <HeaderLink

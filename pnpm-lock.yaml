@@ -11,6 +11,7 @@ specifiers:
   autoprefixer: ^10.4.12
   daisyui: ^2.31.0
   lucide: ^0.90.0
+  lucide-preact: ^0.90.0
   postcss: ^8.4.16
   preact: ^10.6.5
   rollup: ^2.79.1
@@ -28,6 +29,7 @@ dependencies:
   autoprefixer: 10.4.12_postcss@8.4.16
   daisyui: 2.31.0_jhfe3rbur6kzimvcehnoniy6fy
   lucide: 0.90.0
+  lucide-preact: 0.90.0_preact@10.11.0
   postcss: 8.4.16
   preact: 10.11.0
   rollup: 2.79.1
@@ -2748,6 +2750,14 @@ packages:
     engines: {node: '>=10'}
     dependencies:
       yallist: 4.0.0
+    dev: false
+
+  /lucide-preact/0.90.0_preact@10.11.0:
+    resolution: {integrity: sha512-5maKhQCg/+c0COsF3pzWdEaWhF2K19w6gnjEaoWuG/lclkVKbLButXhGwq3+ShZxXfvfDCZ5OQPkPx90Ntq+Ew==}
+    peerDependencies:
+      preact: ^10.5.13
+    dependencies:
+      preact: 10.11.0
     dev: false
 
   /lucide/0.90.0:
