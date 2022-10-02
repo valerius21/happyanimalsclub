@@ -1,4 +1,5 @@
 ---
+import { Image } from "@astrojs/image/components";
 import DonationCard from "../components/DonationCard.astro";
 import HeaderLink from "../components/HeaderLink.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
@@ -10,18 +11,21 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     class="flex flex-col lg:flex-row-reverse mx-auto p-8 mb-8 justify-around items-start sticky top-0"
   >
     <div class="grid gap-6">
-      <img
-        src="/appeal_1200.jpg"
+      <Image
+        src={import("../assets/appeal_1200.jpg")}
+        format={"webp"}
         alt="Please support the shelter. :)"
         class="hidden sm:block max-w-lg rounded-md shadow-xl lg:ml-5"
       />
-      <img
-        src="/pets/dog_2.jpg"
+      <Image
+        src={import("../assets/pets/dog_2.jpg")}
+        format={"webp"}
         alt="Please support the shelter. :)"
         class="hidden sm:block max-w-lg rounded-md shadow-xl lg:ml-5"
       />
-      <img
-        src="/pets/cat_1.jpg"
+      <Image
+        src={import("../assets/pets/cat_1.jpg")}
+        format={"webp"}
         alt="Please support the shelter. :)"
         class="hidden sm:block max-w-lg rounded-md shadow-xl lg:ml-5"
       />

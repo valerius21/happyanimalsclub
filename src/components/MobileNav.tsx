@@ -49,7 +49,7 @@ export const MobileNav: FunctionComponent = () => {
       }`}
       onClick={toggle}
     >
-      {!isOpen ? <Menu class="h-4" /> : <X class="h-4" />}
+      {!isOpen ? <Menu class="h-6" /> : <X class="h-6" />}
     </button>
   );
 
